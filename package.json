@@ -1,12 +1,33 @@
 {
   "name": "partners-sdk",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Partners SDK To Interact With The Mobihealth API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:api": "openapi-typescript http://0.0.0.0:9123/api/docs/schema/ -o src/api/schema.ts",
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "rubbie kelvin <dev.rubbie@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "packageManager": "pnpm@9.15.3",
+  "dependencies": {
+    "openapi-fetch": "^0.15.0"
+  },
+  "devDependencies": {
+    "openapi-typescript": "^7.10.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "mobihealth",
+    "api",
+    "sdk",
+    "partners",
+    "healthcare"
+  ]
 }
