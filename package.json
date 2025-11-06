@@ -9,8 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "generate:api": "openapi-typescript http://0.0.0.0:9123/api/docs/schema/ -o src/api/schema.ts",
+    "generate:api": "openapi-typescript http://0.0.0.0:9123/api/docs/schema/ -o src/schema.ts",
     "prepublishOnly": "npm run build"
   },
   "author": "rubbie kelvin <dev.rubbie@gmail.com>",
